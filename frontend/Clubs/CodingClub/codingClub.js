@@ -36,14 +36,14 @@ document.addEventListener('DOMContentLoaded', () => {
             const listItem = document.createElement('li');
             const farItem = document.createElement('img');
   
-            farItem.src=`../../backend/club_images/${event.dispImage}club_.jpeg`;
+            farItem.src=`../../backend/club_images/${event.Upload_image}club_.jpeg`;
             listItem.innerHTML = `
                 <strong>${event.name_of_events}</strong><br>
-                Host Institute: ${event.name_of_host_institute}<br>
+                Host Institute: ${event.name_of_host_department}<br>
                 Participants: ${event.no_of_student_of_participated_in_event}<br>
                 Date: ${event.Date_of_event_start}<br>
                 Date: ${event.Date_of_event_end}<br>
-                Prizes: ${event.Details_of_prizes_won}<br>
+                Prizes: ${event.Price_Certification}<br>
                 Venue: ${event.Venue}<br>
                 Speaker: ${event.Speaker}<br>
                 Objective: ${event.Objective}<br><br>

@@ -292,7 +292,7 @@ app.post('/sports-club', async (req, res) => {
             });
 
             await newImage.save();
-            res.send('Successfully done');
+            res.send('../frontend/Necessary/SDM.html');
         });
     } catch (error) {
         console.error(error);
@@ -321,3 +321,4 @@ app.get('/hello-world',(req,res)=>{
 app.listen(3000,()=>{
     console.log('listening on port 3000');
 })
+

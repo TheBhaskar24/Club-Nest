@@ -20,7 +20,7 @@ const CodingClubSchema = new mongoose.Schema({
         required: true,
         unique:true, 
     },
-     name_of_host_institute: {
+     name_of_host_department: {
          type: String,
          required: true,
      },
@@ -29,7 +29,7 @@ const CodingClubSchema = new mongoose.Schema({
          required:true
      },
 
-     Details_of_prizes_won: {
+     Price_Certification: {
          type: String,
      },
      Date_of_event_start: {
@@ -38,7 +38,7 @@ const CodingClubSchema = new mongoose.Schema({
      Date_of_event_end: {
          type: Date,
      },
-     dispImage: {
+     Upload_image: {
         type: String, 
      },
      Venue:{

@@ -33,20 +33,20 @@ router.post('/coding-club', async (req, res) => {
             }
             const newImage = new CodingClub({
                 name_of_events: req.body.name_of_events,
-                name_of_host_institute:req.body.name_of_host_institute,
+                name_of_host_department:req.body.name_of_host_department,
                 no_of_student_of_participated_in_event:req.body.no_of_student_of_participated_in_event,
                 Date_of_event_start:req.body.Date_of_event_start,
                 Date_of_event_end:req.body.Date_of_event_end,
-                Details_of_prizes_won:req.body.Details_of_prizes_won,
+                Price_Certification:req.body.Price_Certification,
                 Venue:req.body.Venue,
                 Speaker:req.body.Speaker,
                 Objective:req.body.Objective,
-                dispImage: req.body.name_of_events
+                Upload_image: req.body.name_of_events
                 
             });
 
             await newImage.save();
-            res.send('Successfully done');
+            res.send('Succefully Done');
         });
     } catch (error) {
         console.error(error);
