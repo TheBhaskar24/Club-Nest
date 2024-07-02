@@ -38,7 +38,7 @@ app.post('/register', async (req, res) => {
 app.post('/login', passport.authenticate("admin", {
     failureMessage: "Wrong Id Password",
     successMessage: 'successfully logged in',
-    successRedirect: 'http://127.0.0.1:5500/ClubNest-main/frontend/clubs/CodingClub/codingClub.html'
+    successRedirect: 'http://127.0.0.1:5500/frontend/Admin/admin.html'
 }), async (req, res) => {
     // Handle successful admin authentication
 });
@@ -105,7 +105,7 @@ app.post('/login', passport.authenticate("admin", {
 const roboticsStorage = multer.diskStorage({
     destination: './club_images',
     filename: function (req, file, cb) {
-        cb(null, req.body.name_of_events + 'club_' + '.jpeg');
+        cb(null, req.body.name_of_events + '_club' + '.jpeg');
     },
 });
 
@@ -119,16 +119,15 @@ app.post('/robotics-club', async (req, res) => {
             }
             const newImage = new RoboticsClub({
                 name_of_events: req.body.name_of_events,
-                name_of_host_institute:req.body.name_of_host_institute,
+                name_of_host_department:req.body.name_of_host_department,
                 no_of_student_of_participated_in_event:req.body.no_of_student_of_participated_in_event,
                 Date_of_event_start:req.body.Date_of_event_start,
                 Date_of_event_end:req.body.Date_of_event_end,
-                Details_of_prizes_won:req.body.Details_of_prizes_won,
+                Price_Certification:req.body.Price_Certification,
                 Venue:req.body.Venue,
-                Speaker:req.body.Speaker,
+                name_of_speaker:req.body.name_of_speaker,
                 Objective:req.body.Objective,
                 dispImage: req.body.name_of_events
-                
             });
 
             await newImage.save();
@@ -159,7 +158,7 @@ app.get('/robotics-club', async(req, res) => {
 const gateStorage = multer.diskStorage({
     destination: './club_images',
     filename: function (req, file, cb) {
-        cb(null, req.body.name_of_events + 'club_' + '.jpeg');
+        cb(null, req.body.name_of_events + '_club' + '.jpeg');
     },
 });
 
@@ -173,16 +172,15 @@ app.post('/gate-club', async (req, res) => {
             }
             const newImage = new GateClub({
                 name_of_events: req.body.name_of_events,
-                name_of_host_institute:req.body.name_of_host_institute,
+                name_of_host_department:req.body.name_of_host_department,
                 no_of_student_of_participated_in_event:req.body.no_of_student_of_participated_in_event,
                 Date_of_event_start:req.body.Date_of_event_start,
                 Date_of_event_end:req.body.Date_of_event_end,
-                Details_of_prizes_won:req.body.Details_of_prizes_won,
+                Price_Certification:req.body.Price_Certification,
                 Venue:req.body.Venue,
-                Speaker:req.body.Speaker,
+                name_of_speaker:req.body.name_of_speaker,
                 Objective:req.body.Objective,
                 dispImage: req.body.name_of_events
-                
             });
 
             await newImage.save();
@@ -213,7 +211,7 @@ app.get('/gate-club', async(req, res) => {
 const aiiotStorage = multer.diskStorage({
     destination: './club_images',
     filename: function (req, file, cb) {
-        cb(null, req.body.name_of_events + 'club_' + '.jpeg');
+        cb(null, req.body.name_of_events + '_club' + '.jpeg');
     },
 });
 
@@ -227,16 +225,15 @@ app.post('/aiiot-club', async (req, res) => {
             }
             const newImage = new AIIoTClub({
                 name_of_events: req.body.name_of_events,
-                name_of_host_institute:req.body.name_of_host_institute,
+                name_of_host_department:req.body.name_of_host_department,
                 no_of_student_of_participated_in_event:req.body.no_of_student_of_participated_in_event,
                 Date_of_event_start:req.body.Date_of_event_start,
                 Date_of_event_end:req.body.Date_of_event_end,
-                Details_of_prizes_won:req.body.Details_of_prizes_won,
+                Price_Certification:req.body.Price_Certification,
                 Venue:req.body.Venue,
-                Speaker:req.body.Speaker,
+                name_of_speaker:req.body.name_of_speaker,
                 Objective:req.body.Objective,
                 dispImage: req.body.name_of_events
-                
             });
 
             await newImage.save();
@@ -265,7 +262,7 @@ app.get('/aiiot-club', async(req, res) => {
 const sportsStorage = multer.diskStorage({
     destination: './club_images',
     filename: function (req, file, cb) {
-        cb(null, req.body.name_of_events + 'club_' + '.jpeg');
+        cb(null, req.body.name_of_events + '_club' + '.jpeg');
     },
 });
 
@@ -279,16 +276,15 @@ app.post('/sports-club', async (req, res) => {
             }
             const newImage = new SportsClub({
                 name_of_events: req.body.name_of_events,
-                name_of_host_institute:req.body.name_of_host_institute,
+                name_of_host_department:req.body.name_of_host_department,
                 no_of_student_of_participated_in_event:req.body.no_of_student_of_participated_in_event,
                 Date_of_event_start:req.body.Date_of_event_start,
                 Date_of_event_end:req.body.Date_of_event_end,
-                Details_of_prizes_won:req.body.Details_of_prizes_won,
+                Price_Certification:req.body.Price_Certification,
                 Venue:req.body.Venue,
-                Speaker:req.body.Speaker,
+                name_of_speaker:req.body.name_of_speaker,
                 Objective:req.body.Objective,
                 dispImage: req.body.name_of_events
-                
             });
 
             await newImage.save();

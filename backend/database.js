@@ -38,16 +38,15 @@ const CodingClubSchema = new mongoose.Schema({
      Date_of_event_end: {
          type: Date,
      },
-     Upload_image: {
+     dispImage: {
         type: String, 
      },
      Venue:{
          type:String,
          required:true
      },
-     Speaker:{
+     name_of_speaker:{
          type:String,
-         required:true
      } ,
      Objective:{
          type:String 
@@ -67,8 +66,9 @@ const RoboticsClubSchema = new mongoose.Schema({
     name_of_events: {
         type: String,
         required: true,
+        unique:true,
     },
-    name_of_host_institute: {
+    name_of_host_department: {
         type: String,
         required: true,
     },
@@ -77,7 +77,7 @@ const RoboticsClubSchema = new mongoose.Schema({
         required: true,
     },
 
-    Details_of_prizes_won: {
+    Price_Certification: {
         type: String,
     },
     Date_of_event_start: {
@@ -93,10 +93,9 @@ const RoboticsClubSchema = new mongoose.Schema({
         type:String,
         required:true
     },
-    Speaker:{
+    name_of_Speaker:{
         type:String,
-        required:true
-    } ,
+    },
     Objective:{
         type:String 
     }
@@ -114,17 +113,17 @@ const GateClubSchema = new mongoose.Schema({
        type: String,
        required: true,
        unique:true, 
-   },
-    name_of_host_institute: {
+    },
+    name_of_host_department: {
         type: String,
         required: true,
     },
-   no_of_student_of_participated_in_event: {
+    no_of_student_of_participated_in_event: {
         type: String,
         required:true
     },
 
-    Details_of_prizes_won: {
+    Price_Certification: {
         type: String,
     },
     Date_of_event_start: {
@@ -140,9 +139,8 @@ const GateClubSchema = new mongoose.Schema({
         type:String,
         required:true
     },
-    Speaker:{
+    name_of_Speaker:{
         type:String,
-        required:true
     } ,
     Objective:{
         type:String 
@@ -160,17 +158,17 @@ const AIIoTClubSchema = new mongoose.Schema({
        type: String,
        required: true,
        unique:true, 
-   },
-    name_of_host_institute: {
+    },
+    name_of_host_department: {
         type: String,
         required: true,
     },
-   no_of_student_of_participated_in_event: {
+    no_of_student_of_participated_in_event: {
         type: String,
         required:true
     },
 
-    Details_of_prizes_won: {
+    Price_Certification: {
         type: String,
     },
     Date_of_event_start: {
@@ -186,9 +184,8 @@ const AIIoTClubSchema = new mongoose.Schema({
         type:String,
         required:true
     },
-    Speaker:{
+    name_of_Speaker:{
         type:String,
-        required:true
     } ,
     Objective:{
         type:String 
@@ -206,17 +203,17 @@ const SportsClubSchema = new mongoose.Schema({
        type: String,
        required: true,
        unique:true, 
-   },
-    name_of_host_institute: {
+    },
+    name_of_host_department: {
         type: String,
         required: true,
     },
-   no_of_student_of_participated_in_event: {
+    no_of_student_of_participated_in_event: {
         type: String,
         required:true
     },
 
-    Details_of_prizes_won: {
+    Price_Certification: {
         type: String,
     },
     Date_of_event_start: {
@@ -232,9 +229,8 @@ const SportsClubSchema = new mongoose.Schema({
         type:String,
         required:true
     },
-    Speaker:{
+    name_of_Speaker:{
         type:String,
-        required:true
     } ,
     Objective:{
         type:String 

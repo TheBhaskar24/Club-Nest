@@ -28,33 +28,46 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
   
-        // Create an HTML list to display the events
-        const eventList = document.createElement('ul');
+       // Create an HTML list to display the events
+     //  const eventList = document.createElement('ul');
   
-        // Iterate through the data and create list items
-        data.forEach(event => {
-            const listItem = document.createElement('li');
-            const farItem = document.createElement('img');
+       // Iterate through the data and create list items
+       data.forEach(event => {
+          // const listItem = document.createElement('li');
+          // const farItem = document.createElement('img');
   
-            farItem.src=`../../backend/club_images/${event.Upload_image}club_.jpeg`;
-            listItem.innerHTML = `
-                <strong>${event.name_of_events}</strong><br>
-                Host Institute: ${event.name_of_host_department}<br>
-                Participants: ${event.no_of_student_of_participated_in_event}<br>
-                Date: ${event.Date_of_event_start}<br>
-                Date: ${event.Date_of_event_end}<br>
-                Prizes: ${event.Price_Certification}<br>
-                Venue: ${event.Venue}<br>
-                Speaker: ${event.Speaker}<br>
-                Objective: ${event.Objective}<br><br>
+           farItem.src=`../../backend/club_images/${event.Upload_image}club_.jpeg`;
+           listItem.innerHTML = `
+            <table>
+            <tr>
+            <th>Events
+                <strong>${event.name_of_events}</strong><br></th>
+            
+
+               
+            
+            <th>Venue
+                Venue: ${event.Venue}<br></th>
+            
+            
+            
+            <th>Speaker
+                Speaker: ${event.Speaker}<br></th>
+            
+            
+            
+            <th>Objective
+                Objective: ${event.Objective}<br><br></th>
+            </tr>   
+            </table> 
             `;
-            eventList.appendChild(listItem);
-            eventList.appendChild(farItem);
+          //  eventList.appendChild(listItem);
+           // eventList.appendChild(farItem);
         });
   
         // Append the list to the container
-        eventListDiv.appendChild(eventList);
-        console.log("Hello World")
+        // eventListDiv.appendChild(eventList);
+        // console.log("Hello World")
     }
   });
   

@@ -19,7 +19,7 @@ const app = express();
 const codingStorage = multer.diskStorage({
     destination: './club_images',
     filename: function (req, file, cb) {
-        cb(null, req.body.name_of_events + 'club_' + '.jpeg');
+        cb(null, req.body.name_of_events + '_club' + '.jpeg');
     },
 });
 
@@ -39,9 +39,9 @@ router.post('/coding-club', async (req, res) => {
                 Date_of_event_end:req.body.Date_of_event_end,
                 Price_Certification:req.body.Price_Certification,
                 Venue:req.body.Venue,
-                Speaker:req.body.Speaker,
+                name_of_speaker:req.body.name_of_speaker,
                 Objective:req.body.Objective,
-                Upload_image: req.body.name_of_events
+                dispImage: req.body.name_of_events
                 
             });
 
